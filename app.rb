@@ -1,14 +1,13 @@
 ['rubygems', 'sinatra', 'dm-core' , 'dm-validations' , 'haml'].each{|r|require r}
 
 ## CONFIGURATION
-configure :development do
-  DataMapper.setup(:default, {
-    :adapter  => 'sqlite3',
-    :host     => 'localhost',
-    :username => '' ,
-    :password => '',
-    :database => 'db/app.db'})  
-end
+DataMapper.setup(:default, {
+ :adapter  => 'sqlite3',
+ :host     => 'localhost',
+ :username => '' ,
+ :password => '',
+ :database => 'db/app.db'})
+
 
 ## SET HAML > HTML5
 set :haml, :format => :html5

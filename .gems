@@ -1,4 +1,5 @@
 sinatra
 dm-core
 dm-validations
+dm-sqlite-adapter
 haml

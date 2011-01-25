@@ -1,0 +1,7 @@
+#Sinatra
+
+['rubygems', 'sinatra',].each{|r|require r}
+
+get '/' do
+  erb :index
+end

@@ -1,0 +1,56 @@
+html, body {
+ margin:0;
+ padding:0;
+font-family:"Myriad Pro", Arial;
+font-size:16px;
+}
+#map-container{
+width:300px;
+margin:0 auto;
+}
+#map {
+position:relative;
+float:left;
+width:300px;
+height:550px;
+background-color:#000;
+z-index:1;
+}
+.mark {
+position:absolute;
+display:block;
+width:12px;
+height:12px;
+margin:-6px 0 0 -6px;
+padding:0;
+background-color:#fff;
+border-radius:6px;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+z-index:2;
+cursor:pointer;
+}
+.highlight {
+background-color:#ff0000;
+-webkit-transition: background-color .16s linear;
+}
+#clearmap {
+clear:both;
+float:left;
+width:78px;
+height:25px;
+margin:10px;
+padding:9px 0px 0px 18px;
+background-color:#000;
+color:#fff;
+border-radius:8px;
+-webkit-border-radius:8px;
+-moz-border-radius:8px;
+-webkit-transition: background-color .16s linear;
+}
+#clearmap:hover{
+background-color:#9c9c9c;
+color:#000;
+-webkit-transition: background-color .16s linear;
+cursor:pointer;
+}

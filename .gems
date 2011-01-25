@@ -1,1 +1,4 @@
 sinatra
+dm-core
+dm-validations
+haml

@@ -1,1 +1,12 @@
 !!!
+%html
+ %head
+  %title ClickTrack
+  %link(rel="stylesheet" href="css/style.css")  
+  %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js")
+  %script(type="text/javascript" src="js/site.js")
+ %body
+  #chart-container
+   #chart
+   #clearchart.button Clear All
+   #save.button Save

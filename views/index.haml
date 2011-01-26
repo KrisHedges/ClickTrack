@@ -6,7 +6,19 @@
   %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js")
   %script(type="text/javascript" src="js/site.js")
  %body
-  #chart-container
-   #chart
-   #clearchart.button Clear All
-   #save.button Save
+  #page
+   #main
+    %header 
+     %h2 Patient Name - Date
+    #chart-container
+     #save.button Save
+     #clearchart.button Clear All
+     #chart     
+   %sidebar
+    #chart-history
+     %h2 History
+     %ul
+      %li December 27, 2010
+      %li January 2, 2011
+      %li February 14, 2011
+      

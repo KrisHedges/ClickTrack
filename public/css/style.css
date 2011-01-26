@@ -6,6 +6,7 @@ html, body {
  font-size:1em;
  font-family:"Myriad Pro", Arial;
  background-color:#2f2f2f;
+ color:#fff;
 }
 #page{
  width:100%;
@@ -47,19 +48,19 @@ html, body {
 .point {
  position:absolute;
  display:block;
- width:8px;
- height:8px;
- margin:-4px 0 0 -4px;
+ width:12px;
+ height:12px;
+ margin:-6px 0 0 -6px;
  padding:0;
- background-color:#ff0000;
- border-radius:4px;
- -webkit-border-radius:4px;
- -moz-border-radius:4px;
+ background-color:#F3FF20;
+ border-radius:6px;
+ -webkit-border-radius:6px;
+ -moz-border-radius:6px;
  z-index:2;
  cursor:pointer;
 }
 .highlight {
- background-color:#fff;
+ background-color:#C51C00;
  -webkit-transition: background-color .16s linear;
 }
 .button{
@@ -69,19 +70,43 @@ html, body {
  height:25px;
  margin:15px 10px 10px 10px;
  padding:9px 0px 0px 0px;
- background-color:#000;
+ background-image: -webkit-gradient(
+     linear,
+     left bottom,
+     left top,
+     color-stop(0.12, rgb(41,41,41)),
+     color-stop(0.56, rgb(71,71,71)),
+     color-stop(0.78, rgb(89,89,89))
+ );
+ background-image: -moz-linear-gradient(
+     center bottom,
+     rgb(41,41,41) 12%,
+     rgb(71,71,71) 56%,
+     rgb(89,89,89) 78%
+ );
  color:#fff;
  text-align:center;
- border:2px solid #2f2f2f;
- border-radius:8px;
- -webkit-border-radius:8px;
- -moz-border-radius:8px;
- -webkit-transition: background-color .16s linear;
+ border:1px solid #1b1b1b;
+ border-radius:6px;
+ -webkit-border-radius:6px;
+ -moz-border-radius:6px;
 }
 .button:hover{
- background-color:#2f2f2f;
+ background-image: -webkit-gradient(
+     linear,
+     left bottom,
+     left top,
+     color-stop(0.12, rgb(51,51,51)),
+     color-stop(0.56, rgb(92,92,92)),
+     color-stop(0.78, rgb(110,110,110))
+ );
+ background-image: -moz-linear-gradient(
+     center bottom,
+     rgb(51,51,51) 12%,
+     rgb(92,92,92) 56%,
+     rgb(110,110,110) 78%
+ );
  color:#fff;
- -webkit-transition: background-color .16s linear;
  cursor:pointer;
 }
 sidebar {
@@ -98,4 +123,10 @@ sidebar {
  margin:10px;
  padding:0;
  width:100%;
+}
+#instructions{
+clear:both;
+width:100%;
+margin:10px;
+text-align:center;
 }

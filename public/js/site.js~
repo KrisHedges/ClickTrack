@@ -12,11 +12,11 @@ $(document).ready(function() {
      }
  });
  $(".point").live("click", function() {
-     $(this).fadeOut();
+     $(this).fadeOut('fast');
      return false;
  });
  $("#clearchart").bind("click", function() {
-     $(".point").fadeOut();
+     $(".point").fadeOut('slow');
  });
  $("#save").bind("click", function(){
      var points = $("#chart").html();

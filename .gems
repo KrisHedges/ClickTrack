@@ -3,4 +3,5 @@ dm-core
 dm-migrations
 dm-validations
 dm-sqlite-adapter
+dm-postgres-adapter
 haml

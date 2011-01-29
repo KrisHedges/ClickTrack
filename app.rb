@@ -24,9 +24,9 @@ get '/' do
 end
 
 get '/charts' do
- @charts = Chart.all :order => [:created_at.desc]
+ @charts = Chart.all(:order => [:created_at.desc])
  @chartcount = @charts.size
- haml :list
+ haml :list, layout => :false
 end
 
 get '/chart/:id' do

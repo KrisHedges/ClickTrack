@@ -27,7 +27,7 @@ $(document).ready(function() {
 	clearChart();
 	return false;
     };
-
+    
     function showList() {
 	$.ajax({
 	    type: "GET",
@@ -40,7 +40,7 @@ $(document).ready(function() {
     };
                                                  
 //Init
-     showList();
+    showList();
 
     $("#chart").live("click",
     function(mouse) {
@@ -94,6 +94,8 @@ $(document).ready(function() {
 	var chartid = $(this).attr("id");
 	var chartdate = $(this).attr("title");
 	e.preventDefault();
+	$('.current').removeClass('current');
+	$(this).addClass('current');
 	$.ajax({
 	    type: "GET",
 	    url: "chart/"+chartid,

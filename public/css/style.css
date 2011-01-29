@@ -57,12 +57,12 @@ html, body {
  border-radius:5px;
  -webkit-border-radius:5px;
  -moz-border-radius:5px;
+ -webkit-transition: background-color .16s linear;
  z-index:2;
  cursor:pointer;
 }
 .highlight {
  background-color:#F3FF20;
- -webkit-transition: background-color .16s linear;
 }
 .button{
  display:inline;
@@ -125,8 +125,37 @@ sidebar {
  padding:0;
  width:100%;
 }
-#chart-list-container {
-
+#charts-list-container .chart{
+height:auto;
+width:60%;
+margin:0 0 0 0;
+padding:6px;
+border-radius:6px;
+cursor:pointer;
+-webkit-transition-property:color, background; 
+-webkit-transition-duration: .05s, .05s; 
+-webkit-transition-timing-function: linear, ease-in;
+}
+#charts-list-container .chart:hover{
+background-color:#6f6f6f;
+color:#010101;
+}
+#charts-list-container .current{
+background-color:#6f6f6f;
+color:#010101;
+}
+#charts-list-container .destroy{
+width:35%;
+height:auto;
+margin:4px 0 0 0;
+padding:5px;
+border-radius:4px;
+background-color:#C51C00;
+color:#fff;
+font-size:1em;
+letter-spacing:0.04em;
+font-weight:400;
+text-shadow:#000 0px 1px 1px;
 }
 #instructions{
 clear:both;
@@ -137,9 +166,6 @@ text-align:center;
 #chart-date {
 margin:20px 0 0 0;
 font-size:1.3em;
-}
-.chart{
-cursor:pointer;
 }
 .destroy{
 cursor:pointer;

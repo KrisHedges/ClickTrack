@@ -27,6 +27,7 @@ html, body {
 }
 #main header{
  float:left;  
+ height:100px;
  width:50%;
  color:#fff;
  text-align:center;
@@ -113,9 +114,9 @@ sidebar {
  position:relative;
  display:block;
  float:left;
- width:38%;
+ width:36%;
  height:100%;
- margin:0px;
+ margin:1%;
  padding:0px;
  color:#fff;
 }
@@ -124,9 +125,23 @@ sidebar {
  padding:0;
  width:100%;
 }
+#chart-list-container {
+
+}
 #instructions{
 clear:both;
 width:100%;
 margin:10px;
 text-align:center;
+}
+#chart-date {
+margin:20px 0 0 0;
+font-size:1.3em;
+}
+.chart{
+cursor:pointer;
+}
+.destroy{
+cursor:pointer;
+margin:0 0 0 15px;
 }

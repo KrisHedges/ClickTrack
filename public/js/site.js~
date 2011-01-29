@@ -1,25 +1,77 @@
 $(document).ready(function() {
- $("#chart").live("click", function(mouse) {
-     var x = mouse.pageX - this.offsetLeft;
-     var y = mouse.pageY - this.offsetTop;
-     $("#chart").append('<div class="point" style="top:'+ y +'px;left:'+ x +'px;"></div>');
- });
- $("div.point").live('mouseover mouseout', function(ShowPoint) {
-     if (ShowPoint.type == 'mouseover') {
-	 $(this).addClass("highlight");
-     } else {
-	 $(this).removeClass("highlight");
-     }
- });
- $(".point").live("click", function() {
-     $(this).fadeOut('fast');
-     return false;
- });
- $("#clearchart").bind("click", function() {
-     $(".point").fadeOut('slow');
- });
- $("#save").bind("click", function(){
-     var points = $("#chart").html();
-     alert(points);
- });
+
+    function clearChart() {
+        $(".point").fadeOut('slow',
+        function() {
+            $(this).remove();
+        });
+    };
+
+    function flashNotice(notice) {
+        $(".noticemsg").replaceWith("<span class='noticemsg'>" + notice + "</span>");
+        $("#notice").fadeIn('fast').delay(3000).fadeOut('slow');
+    };
+    function testJson() {
+	$.ajax({
+	    type: 'GET',
+	    url: '/charts',
+	    datatype: 'json',
+	    success:
+	    function() {
+		alert('Got Something');
+	    }
+	});
+    };
+    testJson();
+	
+    $("#chart").live("click",
+    function(mouse) {
+        var x = mouse.pageX - this.offsetLeft;
+        var y = mouse.pageY - this.offsetTop;
+        $("#chart").append('<div class="point" style="top:' + y + 'px;left:' + x + 'px;"></div>');
+    });
+
+    $("div.point").live('mouseover mouseout',
+    function(ShowPoint) {
+        if (ShowPoint.type == 'mouseover') {
+            $(this).addClass("highlight");
+        } else {
+            $(this).removeClass("highlight");
+        }
+    });
+
+    $(".point").live("click",
+    function() {
+        $(this).fadeOut('fast',
+        function() {
+            $(this).remove();
+        });
+        return false;
+    });
+
+    $("#clearchart").bind("click",
+    function() {
+        clearChart();
+    });
+
+    $("#save").bind("click",
+    function() {
+        var displayedpoints = $("#chart").html();
+        $.ajax({
+            type: "POST",
+            processData: "false",
+            url: "/chart/new",
+            datatype: "html",
+            data: {
+                points: displayedpoints
+            },
+            success: function() {
+                clearChart();
+                flashNotice("Your chart has been saved!");
+            },
+            error: function() {
+                flashNotice("There was a problem saving your chart.");
+            }
+        });
+    });
 });

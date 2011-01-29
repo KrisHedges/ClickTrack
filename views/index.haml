@@ -1,7 +1,7 @@
 !!!
 %html
  %head
-  %title ClickTrack
+  %title Where Does it Hurt?
   %link(rel="stylesheet" href="css/style.css")  
   %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js")
   %script(type="text/javascript" src="js/site.js")
@@ -9,7 +9,10 @@
   #page
    #main
     %header 
-     %h2 Patient Name - Chart Date
+     #patient-name 
+     #chart-date Create a new chart now or browse the chart history
+     #notice
+      %span.noticemsg
     #chart-container
      #save.button Save
      #clearchart.button Clear All
@@ -20,9 +23,3 @@
       %br Click on any existing point again to remove it.
    %sidebar
     #chart-history
-     %h2 Chart History
-     %ul
-      %li December 27, 2010
-      %li January 2, 2011
-      %li February 14, 2011
-      

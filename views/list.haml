@@ -1,0 +1,7 @@
+%h2 Chart History
+%h4 #{@chartcount} Charts
+#charts-list-container
+ = @charts.each do |chart|
+  %p
+   %a(class="chart" id="#{chart.id}" title="#{chart.created_at.strftime('%B %e, %Y - %l:%M%p')}") #{chart.created_at.strftime('%B %e, %Y - %l:%M%p')}
+   %a(class="destroy" id="#{chart.id}"title="#{chart.created_at.strftime('%B %e, %Y - %l:%M%p')}") Delete

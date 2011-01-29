@@ -150,12 +150,20 @@ height:auto;
 margin:4px 0 0 0;
 padding:5px;
 border-radius:4px;
+border:1px solid #C51C00;
 background-color:#C51C00;
 color:#fff;
 font-size:1em;
 letter-spacing:0.04em;
 font-weight:400;
 text-shadow:#000 0px 1px 1px;
+-webkit-transition-property:color, background; 
+-webkit-transition-duration: .05s, .05s; 
+-webkit-transition-timing-function: linear, ease-in;
+}
+#charts-list-container .destroy:hover{
+border:1px solid #6f6f6f;
+background-color:#701100;
 }
 #instructions{
 clear:both;

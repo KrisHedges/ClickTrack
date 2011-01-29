@@ -1,7 +1,7 @@
+rubygems
 sinatra
 dm-core
 dm-validations
 dm-migrations
-dm-postgres-adapter
 dm-sqlite-adapter
 haml

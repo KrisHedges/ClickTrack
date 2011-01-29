@@ -4,4 +4,3 @@ dm-validations
 dm-migrations
 dm-sqlite-adapter
 haml
-json

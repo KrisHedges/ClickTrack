@@ -1,10 +1,10 @@
-['rubygems', 'sinatra', 'dm-core' , 'dm-validations' ,'dm-migrations', 'haml', 'json'].each{|r|require r}
+['rubygems', 'sinatra', 'dm-core' , 'dm-validations' ,'dm-migrations', 'haml'].each{|r|require r}
 
 ## SET HAML > HTML5
 set :haml, :format => :html5
 
 ## CONFIGURATION
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/db/development.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/db/app.db")
 
 ## MODELS
 class Chart

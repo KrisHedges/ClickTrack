@@ -4,7 +4,7 @@
 set :haml, :format => :html5
 
 ## CONFIGURATION
-DataMapper.setup(:default, 'sqlite://db/app.db')
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://db/my.db')
 
 ## MODELS
 class Chart

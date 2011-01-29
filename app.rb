@@ -1,4 +1,4 @@
-['rubygems', 'sinatra', 'dm-core' , 'dm-validations' ,'dm-migrations', 'haml'].each{|r|require r}
+['rubygems', 'sinatra', 'dm-core' , 'dm-validations' ,'dm-migrations','dm-sqlite-adapter', 'haml'].each{|r|require r}
 
 ## SET HAML > HTML5
 set :haml, :format => :html5

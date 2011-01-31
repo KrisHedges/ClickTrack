@@ -8,6 +8,10 @@ $(document).ready(function() {
 	$("#chart-date").html("Create a new chart now or browse the chart history");
 	return false;
     };
+    function clearAll() {
+	$('#charts-list-container .current').removeClass('current');
+	clearChart();	
+    };
 
     function flashNotice(notice) {
         $(".noticemsg").replaceWith("<span class='noticemsg'>" + notice + "</span>");
@@ -67,9 +71,9 @@ $(document).ready(function() {
         return false;
     });
 
-    $("#clearchart").bind("click",
+    $("#clear-all").bind("click",
     function() {
-        clearChart();
+        clearAll();
     });
 
     $("#save").bind("click", function() {
